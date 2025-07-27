@@ -58,3 +58,70 @@
       canvas.width = W;
       canvas.height = H;
     });
+
+const musicas = [
+  {
+    titulo: "Wind of Change",
+    artista: "Scorpions",
+    capa: "windofchange.jpg",
+    arquivo: "assets/sibele/windofchange.mp3"
+  },
+  {
+    titulo: "Aerials",
+    artista: "System of a Down",
+    capa: "aerials.jpg",
+    arquivo: "assets/sibele/aerials.mp3"
+  },
+  {
+    titulo: "Its My Life",
+    artista: "Bon Jovi",
+    capa: "itsmylife.jpg",
+    arquivo: "assets/sibele/itsmylife.mp3"
+  }
+];
+
+let indexAtual = 0;
+let tocando = false;
+
+const audio = document.getElementById("audioPlayer");
+const titulo = document.getElementById("musicTitle");
+const artista = document.getElementById("musicArtist");
+const playBtn = document.getElementById("playPauseBtn");
+
+function carregarMusica(index) {
+  const musica = musicas[index];
+  titulo.textContent = musica.titulo;
+  artista.textContent = musica.artista;
+  audio.src = musica.arquivo;
+  playBtn.textContent = "▶️";
+  tocando = false;
+}
+
+function togglePlay() {
+  if (audio.paused) {
+    audio.play();
+    playBtn.textContent = "⏸️";
+    tocando = true;
+  } else {
+    audio.pause();
+    playBtn.textContent = "▶️";
+    tocando = false;
+  }
+}
+
+function nextMusic() {
+  indexAtual = (indexAtual + 1) % musicas.length;
+  carregarMusica(indexAtual);
+  if (tocando) {
+    audio.play();
+    playBtn.textContent = "⏸️";
+  }
+}
+
+audio.onended = () => {
+  nextMusic();
+};
+
+window.onload = () => {
+  carregarMusica(indexAtual);
+};
