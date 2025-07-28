@@ -27,7 +27,7 @@
     </div>
 </div>
 <!--Sibele-->
-<<section class="parabens-musicas">
+<section class="parabens-musicas">
   <h2 class="titulo-musicas">Feliz Aniversário 🎸</h2>
 
   <div class="player-card" id="playerCard">
@@ -44,7 +44,38 @@
   <audio id="audioPlayer" src=""></audio>
 </section>
   <!-- Mateus: Card do bolo com o botão "Start" -->
- 
+ <div class="container2">
+  <div id="options">
+    <h2>Escolha o sabor do bolo</h2>
+    <button type="button" sabor="bolo1">Chocolate</button>
+    <button type="button" sabor="bolo2" class="selecionado">Morango</button>
+    <button type="button" sabor="bolo3">Baunilha</button>
+  </div>
+
+  <div class="avisos">
+    <h4>Orientações:</h4>
+    <ul>
+      <li>O site possui 3 opções de musicas acima, você pode pausar no primeiro botão e mudar a musica no segundo botão.</li>
+      <li>Quando for começar os parabéns, desligue a musica de fundo.</li>
+      <li>Para apagar a velinha, basta clicar em cima dela.</li>
+    </ul>
+
+  </div>
+
+
+  <div class="centro">
+<div id="bolo-container">
+  <img id="escolha" src="assets/mateus/bolos/bolo1.png" alt="Bolo escolhido">
+  <div class="vela-container">
+    <img id="vela" src="assets/mateus/vela/vela1_apagada.png" alt="Vela">
+    <div id="chama"></div>
+  </div>
+</div>
+    <button id="btnParabens">🎉 Start</button>
+    <audio id="musica" src="assets/mateus/audio/parabens.mp3"></audio>
+  </div>
+</div>
+
 <!-- Sibele: 3 cards com o texto de nós 3 falando algo pra professora -->
 <section class="mensagens-parabens">
   <h2 class="titulo-mensagens">Nossas mensagens 💌</h2>
@@ -64,13 +95,24 @@
     
     <div class="mensagem-card">
       <h3>Mateus</h3>
-      <p></p>
+      <p>Feliz aniversário mestra, primeiramente agradeço demais pelos conhecimentos que foram passados, nunca pensei que estaria aqui em grupo fazendo uma pagina com muitos elementos 
+        apenas por diversão e com essa finalidade, fico feliz por nos proporcionar isso, desejo um excelente dia, muita paz e saúde para você e toda a família, abraços!</p>
     </div>
 
   </div>
 </section>
 
   <!-- Mateus: Parte final do site falando que a turma é a favorita dela -->
+<div class="pergunta-container">
+  <h2 class="pergunta">Fernanda, a turma FSN2 é a sua favorita?</h2>
+  <div class="botoes-pergunta">
+    <button id="respostaSim">Simm, claro que é</button>
+    <button id="respostaNao">Não, amo todas as turmas igualmente.</button>
+  </div>
+  <div id="respostaFinal" class="mensagem-final"></div>
+</div>
+
+
 
 </body>
 <script src="script.js"></script>
