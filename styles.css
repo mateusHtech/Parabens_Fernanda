@@ -1,151 +1,108 @@
 body, html {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      font-family: sans-serif;
-      background-color: #000;
-    }
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  background-image: url('assets/emanoel/imagem de fundo.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
-    .confetti-canvas {
-      position: fixed;
-      pointer-events: none;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 9999;
-    }
+.confetti-canvas {
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
 
-    .background-wrapper {
-      background-image: url('assets/emanoel/imagem de fundo.jpeg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      width: 100%;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 3rem;
-    }
+.background-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3rem;
+  background: transparent;
+}
 
-    .container {
-      width: 90%;
-      max-width: 800px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem 0;
-    }
+.container {
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
 
-    .header-banner {
-      width: 80%;
-      max-width: 600px;
-      margin-bottom: 2rem;
-      position: relative;
-      top: -2rem;
-      display: flex;
-      justify-content: center;
-    }
+.header-banner {
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  position: relative;
+  top: -2rem;
+  display: flex;
+  justify-content: center;
+}
 
-    .banner-text {
-      background-color: #8B0000;
-      color: #FFFFFF;
-      font-size: 2rem;
-      font-weight: bold;
-      padding: 1rem 2rem;
-      border-radius: 5px;
-      text-align: center;
-      letter-spacing: 2px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      width: 100%;
-    }
+.banner-text {
+  background-color: #8B0000;
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-align: center;
+  letter-spacing: 2px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
 
-    .content-area {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 2rem;
-    }
+.content-area {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
 
-    .profile-circle {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      border: 5px solid #FFFFFF;
-      overflow: hidden;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
-    }
+.profile-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
 
-    .professor-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-    }
+.professor-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
 
-    .text-box {
-      background-color: #8B0000;
-      border: 5px solid #FFD700;
-      border-radius: 20px;
-      padding: 1.5rem 2rem;
-      width: 80%;
-      max-width: 600px;
-      text-align: center;
-      color: #FFFFFF;
-      font-size: 1.5rem;
-      font-weight: bold;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    }
+.text-box {
+  background-color: #8B0000;
+  border: 5px solid #FFD700;
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
 
-    /* Responsividade */
-    @media (max-width: 768px) {
-      .header-banner {
-        width: 90%;
-        margin-bottom: 1.5rem;
-        top: -1.5rem;
-      }
-      .banner-text {
-        font-size: 1.5rem;
-        padding: 0.75rem 1.5rem;
-      }
-      .profile-circle {
-        width: 150px;
-        height: 150px;
-      }
-      .text-box {
-        width: 90%;
-        padding: 1rem 1.5rem;
-        font-size: 1.2rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .header-banner {
-        margin-bottom: 1rem;
-        top: -1rem;
-      }
-      .banner-text {
-        font-size: 1.2rem;
-        padding: 0.5rem 1rem;
-        letter-spacing: 1px;
-      }
-      .profile-circle {
-        width: 120px;
-        height: 120px;
-        border-width: 3px;
-      }
-      .text-box {
-        font-size: 1rem;
-        padding: 0.75rem 1rem;
-      }
-    }
-  
-  /*cards musica*/
 .parabens-musicas {
   padding: 2rem;
-  background-color: #121212;
+  background: transparent;
   color: white;
   font-family: Arial, sans-serif;
   text-align: center;
@@ -215,18 +172,16 @@ body, html {
   background-color: #1ed760;
 }
 
-
-/*mensagens*/
 .mensagens-parabens {
   padding: 3rem 2rem;
-  background-color: transparent;
+  background: transparent;
   color: #fff;
   text-align: center;
 }
 
 .titulo-mensagens {
   font-size: 2rem;
-  color: #ffd700; /* amarelo ouro */
+  color: #ffd700;
   margin-bottom: 2rem;
   text-shadow: 2px 2px 5px #000;
 }
@@ -239,8 +194,8 @@ body, html {
 }
 
 .mensagem-card {
-  background-color: #8b0000; /* vermelho escuro */
-  border: 2px solid #ffd700; /* amarelo ouro */
+  background-color: #8b0000;
+  border: 2px solid #ffd700;
   border-radius: 15px;
   padding: 1.5rem;
   width: 250px;
@@ -266,199 +221,3 @@ body, html {
   line-height: 1.5;
   color: #fff;
 }
-.container2 {
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url('assets/emanoel/imagem de fundo.jpeg');
-  gap: 30px;
-}
-
-#options {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-  border: 2px solid #ff4d4d;
-  border-radius: 10px;
-  background: rgba(255, 77, 77, 0.1);
-  height: fit-content;
-}
-
-#options h2 {
-  margin-bottom: 10px;
-  color: #ff4d4d;
-  font-size: 18px;
-  box-shadow: 0 4px 10px rgb(0, 0, 0);
-}
-
-#options button {
-  padding: 8px;
-  border-radius: 5px;
-  border: none;
-  background: #cf1818;
-  color: white;
-  font-size: 14px;
-  box-shadow: 0 4px 10px rgba(211, 8, 8, 1);
-}
-
-.centro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-#bolo-container {
-  position: relative;
-  display: inline-block;
-  width: 300px; 
-}
-
-#bolo-container img#escolha {
-  width: 100%;
-}
-
-.vela-container {
-  position: absolute;
-  top: 0;  
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  z-index: 10;
-}
-
-.vela-container img#vela {
-  width: 100%;
-}
-
-#chama {
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 12px;
-  height: 20px;
-  background: radial-gradient(ellipse at center, #ffd700 0%, #ff4500 60%, transparent 70%);
-  border-radius: 50%;
-  animation: tremeluzir 0.3s infinite ease-in-out alternate;
-  opacity: 0;
-  pointer-events: none;
-}
-
-@keyframes tremeluzir {
-  0% {
-    transform: translateX(-50%) scale(1) rotate(-5deg);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateX(-50%) scale(1.1) rotate(5deg);
-    opacity: 1;
-  }
-}
-
-
-#btnParabens {
-  margin-top: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #ff4d4d;
-  border: none;
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.confete {
-  position: fixed;
-  width: 10px;
-  height: 10px;
-  background: hsl(var(--hue), 100%, 50%);
-  top: -20px;
-  animation: cair 3s linear forwards;
-}
-
-@keyframes cair {
-  to {
-    transform: translateY(100vh) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-.avisos {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-  border: 2px solid #f33434;
-  border-radius: 10px;
-  background: rgba(190, 175, 175, 0.1);
-  height: fit-content;
-  h4 {
-   background-clip: text;
-   background: linear-gradient(45deg, #8b0000, #000);
-  }
-   ul {
-     text-align: justify;
-     color: #9b0101;
-     text-shadow: #8B0000;
-
-   }
-  }
-
-
-  
-.pergunta-container {
-  text-align: center;
-  margin-top: 40px;
-  font-family: 'Poppins', sans-serif;
-  position: relative;
-}
-
-.pergunta {
-  font-size: 1.4rem;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.botoes-pergunta {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  position: relative;
-}
-
-.botoes-pergunta button {
-  background-color: #81c784;
-  border: none;
-  color: white;
-  padding: 12px 20px;
-  font-size: 1rem;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  position: relative;
-}
-
-.botoes-pergunta button:hover {
-  background-color: #66bb6a;
-}
-
-#respostaNao {
-  position: absolute;
-  transition: top 0.3s ease, left 0.3s ease;
-}
-
-.mensagem-final {
-  margin-top: 20px;
-  font-size: 1.4rem;
-  color: #e91e63;
-  font-weight: bold;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
