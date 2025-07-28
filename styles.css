@@ -266,3 +266,199 @@ body, html {
   line-height: 1.5;
   color: #fff;
 }
+.container2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('assets/emanoel/imagem de fundo.jpeg');
+  gap: 30px;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border: 2px solid #ff4d4d;
+  border-radius: 10px;
+  background: rgba(255, 77, 77, 0.1);
+  height: fit-content;
+}
+
+#options h2 {
+  margin-bottom: 10px;
+  color: #ff4d4d;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgb(0, 0, 0);
+}
+
+#options button {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background: #cf1818;
+  color: white;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(211, 8, 8, 1);
+}
+
+.centro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#bolo-container {
+  position: relative;
+  display: inline-block;
+  width: 300px; 
+}
+
+#bolo-container img#escolha {
+  width: 100%;
+}
+
+.vela-container {
+  position: absolute;
+  top: 0;  
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  z-index: 10;
+}
+
+.vela-container img#vela {
+  width: 100%;
+}
+
+#chama {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 20px;
+  background: radial-gradient(ellipse at center, #ffd700 0%, #ff4500 60%, transparent 70%);
+  border-radius: 50%;
+  animation: tremeluzir 0.3s infinite ease-in-out alternate;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes tremeluzir {
+  0% {
+    transform: translateX(-50%) scale(1) rotate(-5deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(-50%) scale(1.1) rotate(5deg);
+    opacity: 1;
+  }
+}
+
+
+#btnParabens {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.confete {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: hsl(var(--hue), 100%, 50%);
+  top: -20px;
+  animation: cair 3s linear forwards;
+}
+
+@keyframes cair {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.avisos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border: 2px solid #f33434;
+  border-radius: 10px;
+  background: rgba(190, 175, 175, 0.1);
+  height: fit-content;
+  h4 {
+   background-clip: text;
+   background: linear-gradient(45deg, #8b0000, #000);
+  }
+   ul {
+     text-align: justify;
+     color: #9b0101;
+     text-shadow: #8B0000;
+
+   }
+  }
+
+
+  
+.pergunta-container {
+  text-align: center;
+  margin-top: 40px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.pergunta {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.botoes-pergunta {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+.botoes-pergunta button {
+  background-color: #81c784;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.botoes-pergunta button:hover {
+  background-color: #66bb6a;
+}
+
+#respostaNao {
+  position: absolute;
+  transition: top 0.3s ease, left 0.3s ease;
+}
+
+.mensagem-final {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  color: #e91e63;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
