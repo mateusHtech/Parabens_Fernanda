@@ -1,151 +1,108 @@
 body, html {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      font-family: sans-serif;
-      background-color: #000;
-    }
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  background-image: url('assets/emanoel/imagem de fundo.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
-    .confetti-canvas {
-      position: fixed;
-      pointer-events: none;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 9999;
-    }
+.confetti-canvas {
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
 
-    .background-wrapper {
-      background-image: url('assets/emanoel/imagem de fundo.jpeg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      width: 100%;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 3rem;
-    }
+.background-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3rem;
+  background: transparent;
+}
 
-    .container {
-      width: 90%;
-      max-width: 800px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem 0;
-    }
+.container {
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
 
-    .header-banner {
-      width: 80%;
-      max-width: 600px;
-      margin-bottom: 2rem;
-      position: relative;
-      top: -2rem;
-      display: flex;
-      justify-content: center;
-    }
+.header-banner {
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  position: relative;
+  top: -2rem;
+  display: flex;
+  justify-content: center;
+}
 
-    .banner-text {
-      background-color: #8B0000;
-      color: #FFFFFF;
-      font-size: 2rem;
-      font-weight: bold;
-      padding: 1rem 2rem;
-      border-radius: 5px;
-      text-align: center;
-      letter-spacing: 2px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      width: 100%;
-    }
+.banner-text {
+  background-color: #8B0000;
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-align: center;
+  letter-spacing: 2px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
 
-    .content-area {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 2rem;
-    }
+.content-area {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
 
-    .profile-circle {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      border: 5px solid #FFFFFF;
-      overflow: hidden;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
-    }
+.profile-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
 
-    .professor-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-    }
+.professor-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
 
-    .text-box {
-      background-color: #8B0000;
-      border: 5px solid #FFD700;
-      border-radius: 20px;
-      padding: 1.5rem 2rem;
-      width: 80%;
-      max-width: 600px;
-      text-align: center;
-      color: #FFFFFF;
-      font-size: 1.5rem;
-      font-weight: bold;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    }
+.text-box {
+  background-color: #8B0000;
+  border: 5px solid #FFD700;
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
 
-    /* Responsividade */
-    @media (max-width: 768px) {
-      .header-banner {
-        width: 90%;
-        margin-bottom: 1.5rem;
-        top: -1.5rem;
-      }
-      .banner-text {
-        font-size: 1.5rem;
-        padding: 0.75rem 1.5rem;
-      }
-      .profile-circle {
-        width: 150px;
-        height: 150px;
-      }
-      .text-box {
-        width: 90%;
-        padding: 1rem 1.5rem;
-        font-size: 1.2rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .header-banner {
-        margin-bottom: 1rem;
-        top: -1rem;
-      }
-      .banner-text {
-        font-size: 1.2rem;
-        padding: 0.5rem 1rem;
-        letter-spacing: 1px;
-      }
-      .profile-circle {
-        width: 120px;
-        height: 120px;
-        border-width: 3px;
-      }
-      .text-box {
-        font-size: 1rem;
-        padding: 0.75rem 1rem;
-      }
-    }
-  
-  /*cards musica*/
 .parabens-musicas {
   padding: 2rem;
-  background-color: #121212;
+  background: transparent;
   color: white;
   font-family: Arial, sans-serif;
   text-align: center;
@@ -215,18 +172,16 @@ body, html {
   background-color: #1ed760;
 }
 
-
-/*mensagens*/
 .mensagens-parabens {
   padding: 3rem 2rem;
-  background-color: transparent;
+  background: transparent;
   color: #fff;
   text-align: center;
 }
 
 .titulo-mensagens {
   font-size: 2rem;
-  color: #ffd700; /* amarelo ouro */
+  color: #ffd700;
   margin-bottom: 2rem;
   text-shadow: 2px 2px 5px #000;
 }
@@ -239,8 +194,8 @@ body, html {
 }
 
 .mensagem-card {
-  background-color: #8b0000; /* vermelho escuro */
-  border: 2px solid #ffd700; /* amarelo ouro */
+  background-color: #8b0000;
+  border: 2px solid #ffd700;
   border-radius: 15px;
   padding: 1.5rem;
   width: 250px;
@@ -265,4 +220,46 @@ body, html {
   font-size: 1rem;
   line-height: 1.5;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .header-banner {
+    width: 90%;
+    margin-bottom: 1.5rem;
+    top: -1.5rem;
+  }
+  .banner-text {
+    font-size: 1.5rem;
+    padding: 0.75rem 1.5rem;
+  }
+  .profile-circle {
+    width: 150px;
+    height: 150px;
+  }
+  .text-box {
+    width: 90%;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-banner {
+    margin-bottom: 1rem;
+    top: -1rem;
+  }
+  .banner-text {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    letter-spacing: 1px;
+  }
+  .profile-circle {
+    width: 120px;
+    height: 120px;
+    border-width: 3px;
+  }
+  .text-box {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
 }
