@@ -4,7 +4,11 @@ body, html {
   width: 100%;
   height: 100%;
   font-family: sans-serif;
-  background-color: #000;
+  background-image: url('assets/emanoel/imagem de fundo.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .confetti-canvas {
@@ -18,16 +22,13 @@ body, html {
 }
 
 .background-wrapper {
-  background-image: url('assets/emanoel/imagem de fundo.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 3rem;
+  background: transparent;
 }
 
 .container {
@@ -99,53 +100,9 @@ body, html {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .header-banner {
-    width: 90%;
-    margin-bottom: 1.5rem;
-    top: -1.5rem;
-  }
-  .banner-text {
-    font-size: 1.5rem;
-    padding: 0.75rem 1.5rem;
-  }
-  .profile-circle {
-    width: 150px;
-    height: 150px;
-  }
-  .text-box {
-    width: 90%;
-    padding: 1rem 1.5rem;
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-banner {
-    margin-bottom: 1rem;
-    top: -1rem;
-  }
-  .banner-text {
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-    letter-spacing: 1px;
-  }
-  .profile-circle {
-    width: 120px;
-    height: 120px;
-    border-width: 3px;
-  }
-  .text-box {
-    font-size: 1rem;
-    padding: 0.75rem 1rem;
-  }
-}
-
-/* cards musica */
 .parabens-musicas {
   padding: 2rem;
-  background-color: #121212;
+  background: transparent;
   color: white;
   font-family: Arial, sans-serif;
   text-align: center;
@@ -215,17 +172,16 @@ body, html {
   background-color: #1ed760;
 }
 
-/* mensagens */
 .mensagens-parabens {
   padding: 3rem 2rem;
-  background-color: transparent;
+  background: transparent;
   color: #fff;
   text-align: center;
 }
 
 .titulo-mensagens {
   font-size: 2rem;
-  color: #ffd700; /* amarelo ouro */
+  color: #ffd700;
   margin-bottom: 2rem;
   text-shadow: 2px 2px 5px #000;
 }
@@ -238,8 +194,8 @@ body, html {
 }
 
 .mensagem-card {
-  background-color: #8b0000; /* vermelho escuro */
-  border: 2px solid #ffd700; /* amarelo ouro */
+  background-color: #8b0000;
+  border: 2px solid #ffd700;
   border-radius: 15px;
   padding: 1.5rem;
   width: 250px;
@@ -267,14 +223,12 @@ body, html {
 }
 
 .container2 {
-  background-size: cover;
-  background-repeat: no-repeat;
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('assets/emanoel/imagem de fundo.jpeg');
+  background: transparent;
   gap: 30px;
 }
 
@@ -316,7 +270,7 @@ body, html {
 #bolo-container {
   position: relative;
   display: inline-block;
-  width: 300px; 
+  width: 300px;
 }
 
 #bolo-container img#escolha {
@@ -325,7 +279,7 @@ body, html {
 
 .vela-container {
   position: absolute;
-  top: 0;  
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 50px;
@@ -399,16 +353,16 @@ body, html {
   height: fit-content;
 }
 
-/* Separado do bloco .avisos para CSS puro */
 .avisos h4 {
   background-clip: text;
   background: linear-gradient(45deg, #8b0000, #000);
+  color: transparent;
 }
 
 .avisos ul {
   text-align: justify;
   color: #9b0101;
-  text-shadow: 1px 1px 2px #8B0000;
+  text-shadow: 1px 1px 2px #8b0000;
 }
 
 .pergunta-container {
@@ -416,6 +370,7 @@ body, html {
   margin-top: 40px;
   font-family: 'Poppins', sans-serif;
   position: relative;
+  background: transparent;
 }
 
 .pergunta {
@@ -459,4 +414,46 @@ body, html {
   font-weight: bold;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .header-banner {
+    width: 90%;
+    margin-bottom: 1.5rem;
+    top: -1.5rem;
+  }
+  .banner-text {
+    font-size: 1.5rem;
+    padding: 0.75rem 1.5rem;
+  }
+  .profile-circle {
+    width: 150px;
+    height: 150px;
+  }
+  .text-box {
+    width: 90%;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-banner {
+    margin-bottom: 1rem;
+    top: -1rem;
+  }
+  .banner-text {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    letter-spacing: 1px;
+  }
+  .profile-circle {
+    width: 120px;
+    height: 120px;
+    border-width: 3px;
+  }
+  .text-box {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
 }
